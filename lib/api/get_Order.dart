@@ -3,7 +3,9 @@
 
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:skin_care/model/Employee_Model.dart';
+
 import 'package:skin_care/model/Orde_Modelr.dart';
 
 import '../model/product_Model.dart';
@@ -45,7 +47,7 @@ Get_Order({required Order_Notifire Order , String type =''})async{
     Order.Curren_Order.Ditell.forEach((v)async {
       QuerySnapshot<Map<String, dynamic>> rfn = await FirebaseFirestore.instance
           .collection('employees')
-          .where('id', isEqualTo: Order.Curren_Order.Employee_ID)
+          .where('id', isEqualTo: Order.Curren_Order)
           .get();
       rfn.docs.forEach((element)async {
         EmployeeData emp = EmployeeData.frommap(element.data());

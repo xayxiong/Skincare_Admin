@@ -53,13 +53,7 @@ class EmployeePDF {
                                   fontWeight: pw.FontWeight.bold,
                                   font: ttf),
                             ),
-                            pw.Text(
-                              'ພະນັກງານຂາຍມີ: ${emp.saleCount} ຄົນ',
-                              style: pw.TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: pw.FontWeight.bold,
-                                  font: ttf),
-                            ),
+                           
                           ]),
                     ]),
                 pw.SizedBox(height: 40),

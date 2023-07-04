@@ -10,5 +10,5 @@ class route {
   static String product_type = '/product_type';
   static String reportData = '/ReportData';
   static String MnagerOrderByAdmin = '/ManagerOrderByAdmin';
-  // static String  Cart = '/Cart';
+  static String Cart = '/Cart';
 }

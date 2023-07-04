@@ -2,8 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-
+import 'package:provider/provider.dart';
+import 'package:skin_care/notifire/Cartnotififire.dart';
 
 import '../api/aip.dart';
 import '../dialog_edit/dialog_and_snackbar.dart';
@@ -16,22 +16,21 @@ class element {
   static String nullimage = 'https://rae.mju.ac.th/images/untitled.png';
   //color
   static var pink = Color.fromARGB(255, 250, 56, 205);
-  static var Indigo = const Color(0xff281E5D);
-  static var ocean = const Color(0xff016064);
-  static var sky = const Color(0xff63c5da);
+  static var Indigo = Color.fromARGB(255, 197, 10, 175);
+  static var ocean = Color.fromARGB(255, 8, 153, 61);
+  static var sky = Color.fromARGB(236, 99, 188, 218);
   static var wht = const Color(0xffFAFAFA);
-  static var gray = const Color(0xffF7F7F7);
+  static var gray = Color.fromARGB(255, 218, 26, 74);
 
   //title
   static String title = "ຮ້ານຂາຍເຄື່ອງສຳອາງອອນລາຍ";
- 
+  static String p1 = "ລາຍການສິນຄ້າ";
   static String p2 = "ລົງທະບຽນ\nພະນັກງານ";
   static String p3 = "ຈັດການອໍເດິ";
   static String p4 = "ເພີ່ມສິນຄ້າ";
-  
+
   static String p6 = "ປະເພດສິນຄ້າ";
   static String p7 = "ລາຍງານ";
-  
 
   void elementgetcategory(String categorys) {
     category_id = categorys;
@@ -171,22 +170,22 @@ class element {
   }
 
   // //CartButton
-  // static CartButton(BuildContext context, route) {
-  //   Cartnotifire amoutotal = Provider.of<Cartnotifire>(context);
-  //   return Row(
-  //     children: [
-  //       Text(
-  //         '${amoutotal.Cartlist.length == 0 ? '' : amoutotal.Cartlist.length}',
-  //         style: const TextStyle(color: Colors.white),
-  //       ),
-  //       IconButton(
-  //           onPressed: () {
-  //             Navigator.pushNamed(context, route);
-  //           },
-  //           icon: const Icon(Icons.shopping_cart_outlined)),
-  //     ],
-  //   );
-  // }
+  static CartButton(BuildContext context, route) {
+    Cartnotifire amoutotal = Provider.of<Cartnotifire>(context);
+    return Row(
+      children: [
+        Text(
+          '${amoutotal.Cartlist.length == 0 ? '' : amoutotal.Cartlist.length}',
+          style: const TextStyle(color: Colors.white),
+        ),
+        IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, route);
+            },
+            icon: const Icon(Icons.shopping_cart_outlined)),
+      ],
+    );
+  }
 
   // textformfile
   inputFields(

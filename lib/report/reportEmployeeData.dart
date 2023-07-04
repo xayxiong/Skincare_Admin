@@ -94,8 +94,7 @@ class _ReportEmployeeDataState extends State<ReportEmployeeData> {
               children: [
                 Text('Addmin ມີ ${emp.addminCount} ຄົນ',
                     style: const TextStyle(fontSize: 17)),
-                Text('Sale ມີ ${emp.saleCount} ຄົນ',
-                    style: const TextStyle(fontSize: 17)),
+               
               ],
             ),
             const SizedBox(height: 10),

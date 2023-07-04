@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import '../model/Employee_Model.dart';
 
 class EmployeeNotifire with ChangeNotifier {
-  int saleCount = 0;
+  
   int addminCount = 0;
   List<EmployeeData> employee = [];
   EmployeeData? CurrentEmployee;
@@ -28,20 +28,16 @@ class EmployeeNotifire with ChangeNotifier {
   }
 
   CheckPosition(String position, EmployeeNotifire emp) {
-    if (emp.employeeList.length != saleCount + addminCount) {
+    if (emp.employeeList.length !=  addminCount) {
       if (position == 'Addmin') {
         addminCount++;
         notifyListeners();
-      } else {
-        saleCount++;
-        notifyListeners();
-      }
+      } 
     }
   }
   ceck(){
     addminCount++;
     notifyListeners();
-    saleCount++;
-    notifyListeners();
+   
   }
 }
